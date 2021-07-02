@@ -4,23 +4,23 @@ Algoritmo "semnome"
 
 Var
 ns:vetor[1..999] de inteiro
-op,i,qnt,max,min,inich:inteiro
+op,i,qnt,max,min,inic:inteiro
 
 Inicio
 
   i<-0
   op<-1
   qnt<-0
-  inich<-0
+  inic<-0
   
   enquanto op = 1 faca
 
     escreval("Digite um numero: ")
     leia(ns[i])
-    se inich = 0 entao
+    se inic = 0 entao
       min<-ns[i]
       max<-ns[i]
-      inich<-1
+      inic<-1
     fimse
 
     se ns[i] = 0 entao
@@ -37,7 +37,7 @@ Inicio
   se op = 0 entao
     para i de 1 ate qnt faca
 
-      se i < qnt entao
+      se i < qnt+1 entao
         se max < ns[i] entao
           max<-ns[i]
         fimse
@@ -45,7 +45,6 @@ Inicio
         se ns[i] <> 0 entao
           se min > ns[i] entao
             min <- ns[i]
-            escreval(min, "++") 
           fimse
         fimse
 

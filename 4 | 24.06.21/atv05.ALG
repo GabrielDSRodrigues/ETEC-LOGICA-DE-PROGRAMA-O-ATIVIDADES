@@ -5,7 +5,7 @@ Algoritmo "semnome"
 Var
 casas:vetor[1..999] de real
 fator:vetor[1..999] de real
-preco:vetor[1..999] de real
+precos:vetor[1..999] de real
 area:vetor[1..999] de real
 iptu:vetor[1..999] de real
 i,posMx,posMn:inteiro
@@ -59,16 +59,16 @@ Inicio
     se area[i] <= 50 entao
       iptu[i] <- precos[i]*(6/100)
     fimse
-    se area[i] <= 100 e area[i] > 50 entao
+    se (area[i] <= 100) e (area[i] > 50) entao
       iptu[i] <- precos[i]*(7/100)
     fimse
-    se area[i] <= 200 e area[i] > 100 entao
+    se (area[i] <= 200) e (area[i] > 100) entao
       iptu[i] <- precos[i]*(9/100) 
     fimse
-    se area[i] <= 300 e area[i] > 200 entao
+    se (area[i] <= 300) e (area[i] > 200) entao
       iptu[i] <- precos[i]*(12/100)
     fimse
-    se area[i] <= 400 e area[i] > 300 entao
+    se (area[i] <= 400) e (area[i] > 300) entao
       iptu[i] <- precos[i]*(15/100)
     fimse
     se area[i] > 400 entao
